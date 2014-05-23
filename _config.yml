@@ -1,9 +1,9 @@
 title:            WoQ - Way of Quality
 description:      "Technology oriented consulting in Software Development, Quality Assurance and Deployment"
 logo:             logo_1.png
-disqus_shortname: hmfaysal
+disqus_shortname:
 # Assign a default image for your site's header and footer
-default_bg:       default_bg1.jpg
+default_bg:       default_bg1.png
 search:           true
 share:            true
 # Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
@@ -12,7 +12,7 @@ readtime:         true
 triangleheader:   false
 animated_fins:	  false
 # Specify the fin color in RGB value
-fin_color:        "200,200,200"
+fin_color:        "200,255,200"
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
@@ -22,14 +22,14 @@ baseurl:		  /woq
 # Owner/author information
 owner:
   name:           Andreas Gies
-  avatar:         avatar.png
+  avatar:         Avatar.png
   email:          info@wayofquality.de
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    The Way of Quality consultants provide deep technical consulting to their customers and help them build and deploy large and scalable applications leveraging the latest JVM related technologies.
   twitter:        andreasgies
-  facebook:
+  facebook:       https://www.facebook.com/andreas.gies.5
   github:         woq
-  stackexchange:  https://www.facebook.com/andreas.gies.5
+  stackexchange:
   linkedin:       https://www.linkedin.com/pub/andreas-gies/0/594/aa5
   instagram:      
   flickr:         
@@ -51,14 +51,12 @@ links:
     url: /
     external: false
     icon: home
-  - title: <i class="icon-book"></i> Documentation
-    url: /documentation
   - title: Categories
     url: /categories
   - title: Tags
     url: /tags
-  - title: Faysal who?
-    url: /hossain-mohd-faysal
+  - title: About
+    url: /about.html
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Berlin
@@ -87,8 +85,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://hmfaysal.github.io/'
-  relativeLinks: 'http://hmfaysal.github.io/links.jsonp'
+  siteurl: 'http://woq.github.io/'
+  relativeLinks: 'http://woq.github.io/links.jsonp'
   media: 'images'
   metadata:
     _posts:

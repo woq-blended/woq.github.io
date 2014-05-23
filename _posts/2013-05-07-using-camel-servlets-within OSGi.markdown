@@ -2,10 +2,9 @@
 layout: post
 title:  "Using a Camel servlet in an OSGI container" 
 date:   2013-05-07 
-categories: Camel OSGI
+categories: [Open Source, Camel]
+tags: [Servlet, Camel, Java, OSGI]
 ---
-# 
-
 The other day I was working on a use case that involves running Camel inside an OSGi container and for configuration I am using Apache Aries 1.0.0. As i have an OSGi HTTP Service already running in my container and need to support HTTP posts, I figured using the servlet component would make sense.
 
 This having said, trying to use the configuration found here doesn't work out of the box. The main reason seems to be that CamelServlet is a class rather than an interface, so it can't be registered as an OSGi service easily. Googling around indicated that using the attribute *ext:classes* on the blueprint reference should do the trick, but I got errors from Blueprint not being able to create the service proxy.
