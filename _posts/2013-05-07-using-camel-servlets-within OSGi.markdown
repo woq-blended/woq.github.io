@@ -2,6 +2,7 @@
 layout: post
 title:  "Using a Camel servlet in an OSGI container" 
 date:   2013-05-07 
+comments: true
 categories: [Open Source, Camel]
 tags: [Servlet, Camel, Java, OSGI]
 ---

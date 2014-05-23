@@ -1,16 +1,30 @@
 ---
 layout: page
-title: Andreas Gies
-tags: [WoQ, Way of Quality, Andreas Gies]
+title: About
+tags: [WoQ, Way of Quality]
 ---
-I was born in 1968 and was fascinated with IT from an early age. After studying computer science at the University of the Armed Forces in Munich I was lucky to spend the rest of my air force time as a software developer and project lead for several projects where I learned to love and hate mainframe technologies and got in touch with middleware components.
 
-Out of the air force in 1998 I have spent 12 years with various companies as a consultant / architect / developer mainly on large projects specializing on the middleware components. Around 2005 my interest shifted to the structured / model driven deployment of large projects and supporting the development life cycle from a QA perspective.
+### Way of Quality UG
 
-2010 I left employment and founded the Way of Quality, a company mainly interested in Software Quality Assuarance, Development Processes, Deployment Automation and the like. I work with companies helping them to introduce and/or optimize their development and deployment processes with a special focus on making the transition from development to production as painless as possible.
+Sudetenstrasse 11 <br/>
+94431 Pilsting    <br/>
+<br/>
+__Telefone__ +49 (0)9953 329000     <br/>
+__Mobile__   +49 (0)151 23470823    <br/>
+__Fax__      +49 (0)1805 0065342114 <br/>
 
-From a technology perspective I am very much into Java, but also Ruby which I love to use for prototyping and Scala which love to explore deeper as programs are easier to reason about. My day to day work brings me in touch with a range of technologies and languages including good old KORN shell and other interesting beasts.
+__General Manager__ <br/>
+Andreas Gies <br/>
+eMail [andreas@wayofquality.de](mailto:andreas@wayofquality.de)
 
-I love to use Open Source Technologies and 2 of the 12 years in employment I was lucky to work for FUSE Source, which is now owned by Redhat, where I learned a lot about ActiveMQ, Camel, CXF, ServiceMix and OSGi. These technologies are permanent companions in my current projects and I am looking to put them to use in the Scala world as much as I possibly can and find projects willing to use Scala in the real world.
+__Registration__ <br/>
+Amtsgericht Landshut - HRB 8352
 
-I have a wonderful family allowing me to vanish behind my laptop for periods of time. We live in southern Germany and share our family home with a Jack Russel Terrier and a Husky.
+__VAT-Id__ <br/>
+DE274771254
+
+The contents of our pages were created with great care. For the correctness, completeness and actuality we can not take any responsibility. As a service provider we are responsible according to 1 MDStV and 1 TDG for own contents on these pages under the general laws. However, we are not obligated to monitor the transmitted or stored foreign information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under the general laws remain unaffected. However, liability is only possible from the date of knowledge of a specific infringement. Upon notification of such violations, we will remove the content immediately.
+
+Our offer contains links to external websites over which we have no control. Therefore we can not accept any responsibility for their content. The respective provider or operator of the pages is always responsible for the content of linked pages. The linked sites were checked at the time of linking for possible violations of law. Illegal contents were not recognizable. A permanent control of the linked pages is unreasonable without concrete evidence of a violation. Upon notification of violations, we will remove such links immediately.
+
+The operators of these pages aim to observe or to use their own or license-free works the copyrights of others. The contents and works on these pages created by the site operator are subject to German copyright law. Third party contributions are marked as such. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.
