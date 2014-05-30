@@ -22,7 +22,7 @@ baseurl:		  /woq
 # Owner/author information
 owner:
   name:           Andreas Gies
-  avatar:         Avatar.png
+  avatar:         avatar-andreas-gies.png
   email:          info@wayofquality.de
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    The Way of Quality consultants provide deep technical consulting to their customers and help them build and deploy large and scalable applications leveraging the latest JVM related technologies.
