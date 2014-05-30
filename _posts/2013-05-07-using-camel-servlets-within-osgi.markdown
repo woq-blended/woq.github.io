@@ -13,7 +13,7 @@ This having said, trying to use the configuration found here doesn't work out of
 
 At this point I stepped back and tried to understand what should happen and came up with a solution / workaround that I thought was worth sharing:
 
-1. I need to gain access to the CamelServlet by OSGI means.
+1. I need to gain access to the CamelServlet by OSGi means.
 1. I need to stick a HTTP Registry into that servlet.
 1. I need to define an endpoint that wires the Registry and the Servlet
 
