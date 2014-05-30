@@ -2,6 +2,7 @@
 layout: post
 title:  "Using a datafactory within HawtIO"
 date:   2013-10-08
+author: Andreas Gies
 comments: true
 categories: [Open Source, HawtIO]
 tags: [JavaScript, AngularJS, DataFactory, OSGI]

@@ -48,13 +48,15 @@ bing_verify:
 # For external links add external: true
 links:
   - title: Home
-    url: /
+    url: /index.html
     external: false
     icon: home
   - title: Categories
     url: /categories
   - title: Tags
     url: /tags
+  - title: Engage and Help
+    url: /world-vision.html
   - title: About
     url: /about.html
 

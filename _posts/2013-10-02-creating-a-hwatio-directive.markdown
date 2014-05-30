@@ -2,6 +2,7 @@
 layout: post
 title:  "Using a directive for HawtIO"
 date:   2013-10-02
+author: Andreas Gies
 comments: true
 categories: [Open Source, HawtIO]
 tags: [JavaScript, AngularJS, Directive, OSGI]
