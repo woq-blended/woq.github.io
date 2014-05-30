@@ -11,4 +11,4 @@ I have been a happy [Joomla](http://www.joomla.org/) for a while, but somehow it
 
 Playing with it for a couple of days, the [Way of Quality homepage](http://www.wayofquality.de) has now a new dress and publishing content is merely a git push. I will be busy over the next couple of days to move my project documentation to the new location as well. Looking forward to share more content faster.
 
-A special thanks goes to [Hossain Mohd Faysal](mailto:hmfaysal@alum.mit.edu) for providing a jekyll theme that made it very simple to get the transition done with a minimal headache. All errors that may still be on the web page are my own faults and not attributed to the template. __Thanks, Hossain !__
+A special thanks goes to [Hossain Mohd Faysal](mailto:hmfaysal@alum.mit.edu) for providing a [jekyll theme](http://jekyllthemes.org/themes/hmfaysal-omega-theme/) that made it very simple to get the transition done with a minimal headache. All errors that may still be on the web page are my own faults and not attributed to the template. __Thanks, Hossain !__
