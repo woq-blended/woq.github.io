@@ -27,7 +27,7 @@ owner:
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    The Way of Quality consultants provide deep technical consulting to their customers and help them build and deploy large and scalable applications leveraging the latest JVM related technologies.
   twitter:        andreasgies
-  facebook:       https://www.facebook.com/andreas.gies.5
+  facebook:       andreas.gies.5
   github:         woq
   stackexchange:
   linkedin:       https://www.linkedin.com/pub/andreas-gies/0/594/aa5
