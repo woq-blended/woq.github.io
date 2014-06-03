@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Project Blended
-description: "Making OSGi based development easy"
+description: "The components in more detail"
 tags: [WoQ, Way of Quality, Blended, OSGi]
 ---
 ## [de.woq.osgi.activemq.brokerstarter]({{ site.project.blended.github }}/tree/master/de.woq.osgi.activemq.brokerstarter)
@@ -48,7 +48,9 @@ All of our containers generate a UUID to identify themselves when they are first
 
 ## [de.woq.osgi.java.container.registry]({{ site.project.blended.github }}/tree/master/de.woq.osgi.java.container.registry)
 
-*We thought we would require a container registry, but currently there is no development in that area.*
+The container registry will define a lightweight REST interface to collect runtime information and metrics from remote containers. The information will be persisted within the registry container and used within in a hawtio plugin for visualization.
+
+**_This functionality is in planning, but does not exist yet._**
 
 ## [de.woq.osgi.java.installer]({{ site.project.blended.github }}/tree/master/de.woq.osgi.java.installer)
 
@@ -104,5 +106,5 @@ Just a bundle to collect some helper classes used by other bundles.
 
 This bundle is based on the Akka integration and provides the API to easily create a spray based REST resource in our container.
 
-*This is in very early stages. Comments are welcome, don't even think to use it somewhere in production !!!*
+**_This is in very early stages. Comments are welcome, don't even think to use it somewhere in production !!!_**
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+headline: What we are working on
 tags: [WoQ, Way of Quality, Projects]
 ---
 # [Project Blended](blended/index.html)

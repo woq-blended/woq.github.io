@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Project Blended
-description: "Making OSGi based development easy"
+headline: "How to get the code and get started"
 tags: [WoQ, Way of Quality, Blended, OSGi]
 ---
 ## Code repostory
@@ -14,6 +14,7 @@ We use [Jenkins](http://jenkins-ci.org) to build the project regularly.
 
 * The [build job](http://ci.wayofquality.de:8081/jenkins/job/de.woq.osgi.java-build/) regularly builds and tests all the modules with in project.
 * The [assembly job](http://ci.wayofquality.de:8081/jenkins/job/de.woq.osgi.java-assembly/) runs after the module build to create the sample container distribution and executes the integration tests.
+* The [deploy job](http://ci.wayofquality.de:8081/jenkins/job/de.woq.osgi.java-deploy/) runs regularly every two hours or after the assembly job to rebuild and redeploy the [sample container](http://backend.wayofquality.de:8181/hawtio) (login _woq/woq_).
 
 ## Maven repository
 

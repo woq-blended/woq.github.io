@@ -32,13 +32,15 @@
                     <div class="page-body" itemprop="description">
                         {{ content }}
                     </div>
+                    <footer>
+                        {% if site.share %}{% include share.html %}{% endif %}
+                        {% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div>{% endif %}
                     </footer>
             </article>
         </div>
     </div>
 </div>
-    {% include footer.html %}
-
-{% include scripts.html %}  
+{% include footer.html %}
+{% include scripts.html %}
 </body>
 </html>
