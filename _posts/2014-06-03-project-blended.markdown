@@ -14,4 +14,4 @@ The new documentation location is at [http://www.wayofquality.de/projects/blende
 
 In that sense, **de.woq.osgi.java** is dead, long live project **Blended** ...
 
-_Note: The technical bits of renaming evrything under the covers will take a couple of days._
+_Note: The technical bits of renaming everything under the covers will take a couple of days._
