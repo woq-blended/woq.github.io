@@ -17,4 +17,6 @@ tags: [WoQ, Way of Quality, Blended, OSGi]
 
 # [Spray integration](spray/SprayIntegration.html)
 
+## [Spray integration example](spray/SprayIntegrationExample.html)
+
 

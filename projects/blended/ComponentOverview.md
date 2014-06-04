@@ -36,7 +36,7 @@ This archetypes helps to create a new project for implementing a container. It c
 
 ## [de.woq.osgi.java.camelutils]({{ site.project.blended.github }}/tree/master/de.woq.osgi.java.camelutils)
 
-Using the Camel Servlet component on top of an OSGI HTTP service has its problems as pointed out in our [blog](http://www.wayofquality.de/index.php/en/blog/entry/using-the-camel-servlet-component-in-an-osgi-blueprint-container). This module wraps up the solution presented in the blog entry in a reusable OSGI bundle.
+Using the Camel Servlet component on top of an OSGI HTTP service has its problems as pointed out in our [blog](/open%20source/camel/using-camel-servlets-within-osgi/). This module wraps up the solution presented in the blog entry in a reusable OSGI bundle.
 
 ## [de.woq.osgi.java.container.context]({{ site.project.blended.github }}/tree/master/de.woq.osgi.java.container.context)
 
