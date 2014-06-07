@@ -5,7 +5,7 @@ headline: "IT-Quality and Quality of Life"
 date:   2014-06-07
 comments: true
 author: Andreas Gies
-categories: [Training, Yoga, Open Source]
+categories: [Training, Yoga, Open Source, Way of Quality]
 tags: [Way of Quality, Training, Yoga]
 ---
 Some of you may have noticed [my post](https://twitter.com/andreasgies/status/474564890964000768/photo/1) the other day and may have wondered what
