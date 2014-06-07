@@ -89,7 +89,7 @@ Why am I elaborating about all these things? - A couple of years back I came acr
 
 We are convinced, that with the help of even a minimal Yoga practice the mind and body can get into a state where learning becomes a simple exercise. At the core of all the changes that will happen over the next year or so we intend to offer courses with a mix of Yoga and technology.
 
-Participants will benefit from a daily Yoga routine, a vegetarian diet and a beautiful location - all of which will reduce the stress to learn all the new things that will be coming up in the daily routine. We have seen ourselves that being together with a single goal in mind, sharing not only the technology lectures, but also breakfast, diner and Yoga classes will increase the groups energy, so that achieving the same learning goals will not require 8 hours of classes each day.
+Participants will benefit from a daily Yoga routine, a vegetarian diet and a beautiful location - all of which will reduce the stress to learn all the new things that will be coming up in daily project life. We have seen ourselves that being together with a single goal in mind, sharing not only the technology lectures, but also breakfast, diner and Yoga classes will increase the groups energy, so that achieving the same learning goals will not require 8 hours of classes each day.
 
 This having said I will come back to my introductory reference to my [earlier post](https://twitter.com/andreasgies/status/474564890964000768/photo/1). We are currently preparing to open a training center in Andalusia, Spain that will be the home base for our training courses and remote project work.
 
