@@ -62,12 +62,12 @@ A large part of our efforts will become teaching efforts. Basic trainings in the
 
 ### How not to train
 
-In the past I have given many trainings - and most of them on site - in order to save travel costs. Let's face it: This is not how a training works.
+In the past I have given many trainings - and most of them on site - in order to save travel costs. **Let's face it: This is not how a training works.**
 
 * Most days the training starts late as the participants drop by their work desk before coming to the training room. In 90% of the cases there is something
 that absolutely can't wait until after the the training.
 * Even worse is conducting a training in the clients normal office (Yes - I have done it....need to eat ;)). The phone is ringing constantly, the room is not meant for trainings and normally at least one participant is busy with other stuff.
-* Even within the training room concentration is not necessarily with the training. On most days at least one participant spends his time waiting for the next break to get back to his desk to *fix something*. Some training rooms have access to the company's network - in that case they will be fixing right there rather than listening to things that might actually lessen the need for *ad hoc* fixes.
+* Even within the training room concentration is not necessarily with the training. On most days at least one participant spends his time waiting for the next break to get back to his desk to *fix something*. Some training rooms have access to the company's network - in that case they will be fixing *right there* rather than listening to things that might actually lessen the need for *ad hoc* fixes.
 
 I'll admit this sounds bad, but I have seen it all. I am rather convinced that the human mind is more or less single threaded. Listening to training trying to process the information **and** at the same time trying to do the day-to-day job doesn't work at all.
 
