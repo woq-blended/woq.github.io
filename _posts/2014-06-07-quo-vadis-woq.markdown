@@ -21,7 +21,7 @@ This having said, within that role I have noticed a trend - also at enterprise l
 technologies. A change that I do more than welcome from the bottom of my heart. I was lucky in the last couple of years to be involved with
 many open source projects - [Active MQ](http://activemq.apache.org), [Apache Camel](http://camel.apache.org), [Apache Karaf](http://karaf.apache.org),
 [Akka](http://akka.io),[HawtIO](http://hawt.io) - just to name a few. However, due to certain roles I had during my time as an employee, I was
-still involved with legacy technologies.
+still involved with closed source technologies.
 
 As a result, one important aspect for the future of the _Way of Quality_ is
 
