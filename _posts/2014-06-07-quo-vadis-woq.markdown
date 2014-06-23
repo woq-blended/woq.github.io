@@ -72,7 +72,7 @@ I'll admit this sounds bad, but I have seen it all. I am rather convinced that t
 
 ### How to train
 
-Training is all about absorbing new information, new concepts or optimize concepts already known. In any case it is a mental challenge to change something in the day to day behavior (applying ne knowledge is also a change).
+Training is all about absorbing new information, new concepts or optimize concepts already known. In any case it is a mental challenge to change something in the day to day behavior (applying new knowledge is also a change).
 
 To achieve such a thing the mind must be open to the challenge and the more it is kept within the boundaries of the day job the less new knowledge can be absorbed.
 
