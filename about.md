@@ -4,7 +4,7 @@ title: About
 tags: [WoQ, Way of Quality]
 ---
 
-### Way of Quality UG
+### Way of Quality UG (haftungsbeschraenkt)
 
 Sudetenstrasse 11 <br/>
 94431 Pilsting    <br/>
