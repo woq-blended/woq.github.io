@@ -16,7 +16,7 @@ This is an eaxample writing integration tests against one of our packaged contai
 
 ## [blended-mgmt-agent]({{ site.project.blended.github }}/tree/master/blended-mgmt-agent)
 
-The management reporter regular retrieves the container info and reports it to a given HTTP REST url. This is one of the first bundles we want to implement based on Scala and Akka.
+The management reporter regular retrieves the container info and reports it to a given HTTP REST url. This is one of the first bundles we implement based on Scala and Akka.
 
 ## [blended-mgmt-rest]({{ site.project.blended.github }}/tree/master/blended-mgmt-rest)
 
