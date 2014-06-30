@@ -6,15 +6,15 @@ tags: [WoQ, Way of Quality, Blended, OSGi]
 ---
 ## Code repostory
 
-Our code is hosted at [github](https://github.com/woq/de.woq.osgi.java). Why not fork it and have a look at our modules for yourself ? - We love pull requests ;).
+Our code is hosted at [github](https://github.com/woq-blendes/blended). Why not fork it and have a look at our modules for yourself ? - We love pull requests ;).
 
 ## CI Server
 
 We use [Jenkins](http://jenkins-ci.org) to build the project regularly.
 
-* The [build job](http://ci.wayofquality.de:8081/jenkins/job/de.woq.osgi.java-build/) regularly builds and tests all the modules with in project.
-* The [assembly job](http://ci.wayofquality.de:8081/jenkins/job/de.woq.osgi.java-assembly/) runs after the module build to create the sample container distribution and executes the integration tests.
-* The [deploy job](http://ci.wayofquality.de:8081/jenkins/job/de.woq.osgi.java-deploy/) runs regularly every two hours or after the assembly job to rebuild and redeploy the [sample container](http://backend.wayofquality.de:8181/hawtio) (login _woq/woq_).
+* The [build job](http://ci.wayofquality.de:8081/jenkins/job/blended-build/) regularly builds and tests all the modules with in project.
+* The [assembly job](http://ci.wayofquality.de:8081/jenkins/job/blended-assembly/) runs after the module build to create the sample container distribution and executes the integration tests.
+* The [deploy job](http://ci.wayofquality.de:8081/jenkins/job/blended-deploy/) runs regularly every two hours or after the assembly job to rebuild and redeploy the [sample container](http://backend.wayofquality.de:8181/hawtio) (login _blended/blended_).
 
 ## Maven repository
 
@@ -48,7 +48,7 @@ mvn clean install -P build,assembly,itest
 
 ## Starting the sample container
 
-Navigate to __de.woq.osgi.java.karaf.central/target__. Depending on your environment either unpack the zip- or tar.gz-archive. Then navigate into the extracted directory and start zour container with
+Navigate to __blended-karaf-central/target__. Depending on your environment either unpack the zip- or tar.gz-archive. Then navigate into the extracted directory and start your container with
 
 {% highlight bash %}
 ./bin/karaf
