@@ -7,6 +7,8 @@ tags: [WoQ, Way of Quality, Blended, OSGi]
 
 # [Blended from 30.000ft](30000.html)
 
+# [Getting Started](GettingStarted.html)
+
 # [Component Overview](ComponentOverview.html)
 
 # [Akka integration](akka/AkkaIntegration.html)
