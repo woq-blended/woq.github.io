@@ -3,6 +3,7 @@ layout: page
 title: Project Blended
 description: "The components in more detail"
 tags: [WoQ, Way of Quality, Blended, OSGi]
+comments: true
 ---
 ## [blended-activemq-brokerstarter]({{ site.project.blended.github }}/tree/master/blended-activemq-brokerstarter)
 

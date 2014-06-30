@@ -3,6 +3,7 @@ layout: page
 title: Project Blended
 headline: "How to get the code and get started"
 tags: [WoQ, Way of Quality, Blended, OSGi]
+comments: true
 ---
 ## Code repostory
 
