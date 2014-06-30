@@ -21,7 +21,7 @@ This having said, within that role I have noticed a trend - also at enterprise l
 technologies. A change that I do more than welcome from the bottom of my heart. I was lucky in the last couple of years to be involved with
 many open source projects - [Active MQ](http://activemq.apache.org), [Apache Camel](http://camel.apache.org), [Apache Karaf](http://karaf.apache.org),
 [Akka](http://akka.io),[HawtIO](http://hawt.io) - just to name a few. However, due to certain roles I had during my time as an employee, I was
-still involved with legacy technologies.
+still involved with closed source technologies.
 
 As a result, one important aspect for the future of the _Way of Quality_ is
 
@@ -33,8 +33,7 @@ over the next 2 years or so.
 
 As a consequence, the _Way of Quality_ will shift it's focus to fully embrace the Open Source challenges. The _Way of Quality_ will primarily continue to invest in the recently published [Project Blended](/projects/blended) as this is the foundation for most of the current projects. There is a lot to do in terms of abstracting components out of existing projects into _open source_-consumable components and proper documentation.
 
-In that context we will continue to contribute to the open source projects we are using as a foundation whenever we come across something that fits into
-those projects better than into our own framework.
+In that context we will continue to contribute to the open source projects we are using as a foundation whenever we come across something that fits into those projects better than into our own framework.
 
 ## Speaking slots
 
@@ -54,7 +53,7 @@ fashion efficiently, the development processes must support that kind of working
 
 In the last decade or so I have worked with many teams to streamline their development processes and effectively become more distributed as the demand on response times to requirement changes became tight and tighter.
 
-The Way of Quality will work with projects that want to move into that direction and provide a mix of on- and off-site consulting. We will definitely **not participate in body leasing** as there are more than enough of that kind of consulting companies providing this kind of consulting. Rather we will work with the projects with the gaol in mind to transfer the knowledge into the project to become self sufficient. Yes - that may take some time, but at some point it will happen.
+The Way of Quality will work with projects that want to move into that direction and provide a mix of on- and off-site consulting. We will definitely **not participate in body leasing** as there are more than enough of that kind of consulting companies providing this kind of consulting. Rather we will work with the projects with the goal in mind to transfer the knowledge into the project to become self sufficient. Yes - that may take some time, but at some point it will happen.
 
 ## Training
 
@@ -73,7 +72,7 @@ I'll admit this sounds bad, but I have seen it all. I am rather convinced that t
 
 ### How to train
 
-Training is all about absorbing new information, new concepts or optimize concepts already known. In any case it is a mental challenge to change something in the day to day behavior (applying ne knowledge is also a change).
+Training is all about absorbing new information, new concepts or optimize concepts already known. In any case it is a mental challenge to change something in the day to day behavior (applying new knowledge is also a change).
 
 To achieve such a thing the mind must be open to the challenge and the more it is kept within the boundaries of the day job the less new knowledge can be absorbed.
 
@@ -89,7 +88,7 @@ Why am I elaborating about all these things? - A couple of years back I came acr
 
 We are convinced, that with the help of even a minimal Yoga practice the mind and body can get into a state where learning becomes a simple exercise. At the core of all the changes that will happen over the next year or so we intend to offer courses with a mix of Yoga and technology.
 
-Participants will benefit from a daily Yoga routine, a vegetarian diet and a beautiful location - all of which will reduce the stress to learn all the new things that will be coming up in daily project life. We have seen ourselves that being together with a single goal in mind, sharing not only the technology lectures, but also breakfast, diner and Yoga classes will increase the groups energy, so that achieving the same learning goals will not require 8 hours of classes each day.
+Participants will benefit from a daily Yoga routine, a vegetarian diet and a beautiful location - all of which will reduce the stress to learn all the new things that will be coming up in daily project life. We have seen ourselves that being together with a single goal in mind, sharing not only the technology lectures, but also breakfast, diner and Yoga classes will increase the group's energy, so that achieving the same learning goals as in traditionally organized courses will not require 8 hours of classes each day.
 
 This having said I will come back to my introductory reference to my [earlier post](https://twitter.com/andreasgies/status/474564890964000768/photo/1). We are currently preparing to open a training center in [Andalusia, Spain](http://en.wikipedia.org/wiki/Andalusia) that will be the home base for our training courses and remote project work.
 
