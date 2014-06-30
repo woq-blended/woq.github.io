@@ -6,7 +6,7 @@ tags: [WoQ, Way of Quality, Blended, OSGi]
 ---
 ## Code repostory
 
-Our code is hosted at [github](https://github.com/woq-blendes/blended). Why not fork it and have a look at our modules for yourself ? - We love pull requests ;).
+Our code is hosted at [github](https://github.com/woq-blended/blended). Why not fork it and have a look at our modules for yourself ? - We love pull requests ;).
 
 ## CI Server
 
