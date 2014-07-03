@@ -5,6 +5,9 @@ description: "The components in more detail"
 tags: [WoQ, Way of Quality, Blended, OSGi]
 comments: true
 ---
+#Parent definitions 
+
+
 ## [blended-activemq-brokerstarter]({{ site.project.blended.github }}/tree/master/blended-activemq-brokerstarter)
 
 When we use an ambedded ActiveMQ Broker in our container we like to deploy it by dropping a blueprint xml file into the containers deploy folder. However, this seems to cause problems in some restart scenarios when the broker still has durable subscriptions and subscribers try to reconnect while the broker is yet fully started. This manifests in duplicate subscription id's. The brokerstarter is a small wrapper around the configured ActiveMQ broker that registers a connectionfactory to that broker only after the broker has completed it's own strtup process.

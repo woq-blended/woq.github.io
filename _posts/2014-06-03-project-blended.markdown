@@ -8,7 +8,7 @@ author: Andreas Gies
 categories: [Open Source, Blended, HawtIO, Akka, Spray, Neo4J]
 tags: [Servlet, Camel, Java, OSGI, Akka, Spray]
 ---
-With the transition to Jekyll we have decided that the documentation for our project **[de.woq.osgi.java](https://github.com/woq/de.woq.osgi.java)** should become Jekyll driven pages as well. As **de.woq.osgi.java** is a rather silly name for a project, we have decided to rename it to **Blended**.
+With the transition to Jekyll we have decided that the documentation for our project **[de.woq.osgi.java](https://github.com/woq-blended/blended)** should become Jekyll driven pages as well. As **de.woq.osgi.java** is a rather silly name for a project, we have decided to rename it to **Blended**.
 
 The new documentation location is at [http://www.wayofquality.de/projects/blended/](http://www.wayofquality.de/projects/blended/). We hope the documentation becomes easier to read and navigate by transitioning to the new site and be able to share even better.
 

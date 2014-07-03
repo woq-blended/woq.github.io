@@ -11,7 +11,7 @@ Our applications typically consist of a number of collaborating containers. They
 
 We have seen in our [akka example](AkkaApiExample) how to set up an actor that regular gathers some container information. Instead of just logging the information the actual implementation posts the Json marshalled information to a REST url. Below we have tried to capture the essentials of providing the service that understands those posts.
 
-You can find the code for this example [here](https://github.com/woq/de.woq.osgi.java/tree/master/de.woq.osgi.akka.mgmt.rest). *Please note, that this is not yet production ready code as error handling and the like are missing.*
+You can find the code for this example [here](https://github.com/woq-blended/blended/tree/master/de.woq.blended.mgmt.rest). *Please note, that this is not yet production ready code as error handling and the like are missing.*
 
 ## The data flow
 

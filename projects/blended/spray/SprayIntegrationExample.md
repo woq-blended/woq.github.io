@@ -7,7 +7,7 @@ comments: true
 ---
 # A simple spray example
 
-This is an overview of our spray integration so far and the goal is to get a simple [hello world example]({{ site.project.blended.github }}/tree/master/samples/de.woq.osgi.spray.helloworld) working in an OSGi container.
+This is an overview of our spray integration so far and the goal is to get a simple [hello world example]({{ site.project.blended.github }}/tree/master/samples/de.woq.blended.samples.spray.helloworld) working in an OSGi container.
 
 The service is just plain vanilla spray __HttpService__:
 

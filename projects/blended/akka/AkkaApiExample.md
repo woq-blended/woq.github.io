@@ -15,7 +15,7 @@ Assuming that we are building OSGi based Akka applications - or Akka based OSGi 
 
 ## High level API walk through
 
-Obviously, these are plumbing tasks that can be abstracted away into a nice API. Let's look at an example that is contained in the module [de.woq.osgi.akka.mgmt.reporter]({{ site.project.blended.github }}/tree/master/de.woq.osgi.akka.mgmt.reporter) and is based on the API defined in [de.woq.osgi.akka.system]({{ site.project.blended.github }}/tree/master/de.woq.osgi.akka.system).
+Obviously, these are plumbing tasks that can be abstracted away into a nice API. Let's look at an example that is contained in the module [blended-mgmt-agent]({{ site.project.blended.github }}/tree/master/blended-mgmt-agent) and is based on the API defined in [blended-akka]({{ site.project.blended.github }}/tree/master/blended-akka).
 
 Basically we are defining a bundle performs a periodic report of the most important container properties. For now it does so via the logging system, but in the near future it will report against a REST url (as soon as we got the spray integration working).
 
@@ -41,7 +41,7 @@ The core task of reporting the container information every so often can be defin
   }
 {% endhighlight %}
 
-The idea is to regularly receive __Tick__ messages that trigger the retrieval of the current container info and its reporting. Note that the function is wrapped with __LoggingReceive__, so that messages can be traced by [Akka's debugging and logging](http://doc.akka.io/docs/akka/snapshot/java/logging.html) facilities. The interesting part of the method is how we actually get the ContainerInfo to report. The invokeService method is defined in a trait [__OSGIActor__](https://github.com/woq/de.woq.osgi.java/blob/master/de.woq.osgi.akka.system/src/main/scala/de/woq/osgi/akka/system/OSGIActor.scala) and is defined as
+The idea is to regularly receive __Tick__ messages that trigger the retrieval of the current container info and its reporting. Note that the function is wrapped with __LoggingReceive__, so that messages can be traced by [Akka's debugging and logging](http://doc.akka.io/docs/akka/snapshot/java/logging.html) facilities. The interesting part of the method is how we actually get the ContainerInfo to report. The __invokeService__ method is defined in a trait [__OSGIActor__](https://github.com/woq/de.woq.osgi.java/blob/master/blended-akka/src/main/scala/de/woq/blended/akka/OSGIActor.scala) and is defined as
 
 {% highlight scala %}
 def invokeService[I <: AnyRef, T <: AnyRef](iface: Class[I])(f: InvocationType[I,T])
@@ -139,6 +139,6 @@ Import-Package: *
 
 ## Final Remarks
 
-Perhaps its good to mention that the entire Management Reporter is definded in terms of internal packages, in other words no package is exported to the outside world. All communication happens in terms of messages of some API package.
+Perhaps its good to mention that the entire Management Reporter is defined in terms of internal packages, in other words no package is exported to the outside world. All communication happens in terms of messages of some API package.
 
 The service regularly uses the Container identifier service, but doesn't do so permanently. That frees up references and may avoid obscure effects when the bundle is reloaded or upgraded.
