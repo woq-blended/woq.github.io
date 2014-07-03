@@ -1,4 +1,10 @@
-
+---
+layout: page
+title: Project Blended
+headline: "Akka integration details"
+tags: [WoQ, Way of Quality, Blended, OSGi]
+comments: true
+---
 
 # General Overview
 
