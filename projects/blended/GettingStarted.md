@@ -91,7 +91,7 @@ Please refer to the [Karaf documentation](http://karaf.apache.org/manual/latest-
 
 ## Embedded Management Console
 
-You can also log in to [http:://localhost:8181/hawtio](http:://localhost:8181/hawtio) (user/password = woq/woq). That will display the hawtio management console as shown below. As soon as you bring in more components to the container that support hawtio (e.g. ActiveMQ or Camel), the management tabs for those components will become available. The screenshot below shows the OSGi dependency graph of the current container.
+You can also log in to [http:://localhost:8181/hawtio](http:://localhost:8181/hawtio) (user/password = blended/blended). That will display the hawtio management console as shown below. As soon as you bring in more components to the container that support hawtio (e.g. ActiveMQ or Camel), the management tabs for those components will become available. The screenshot below shows the OSGi dependency graph of the current container.
 
 <figure>
 	<img src="{{ site.url }}/images/projects/blended/hawtio-sample.png">
