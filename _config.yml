@@ -7,7 +7,7 @@ default_bg:       default_bg1.png
 search:           true
 share:            true
 # Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
-readtime:         true
+readtime:         false
 # Turn on or off the fin animations in the header and footer
 triangleheader:   false
 animated_fins:	  false
