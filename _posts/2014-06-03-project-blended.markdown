@@ -13,5 +13,3 @@ With the transition to Jekyll we have decided that the documentation for our pro
 The new documentation location is at [http://www.wayofquality.de/projects/blended/](http://www.wayofquality.de/projects/blended/). We hope the documentation becomes easier to read and navigate by transitioning to the new site and be able to share even better.
 
 In that sense, **de.woq.osgi.java** is dead, long live project **Blended** ...
-
-_Note: The technical bits of renaming everything under the covers will take a couple of days._
