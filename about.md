@@ -7,9 +7,8 @@ tags: [WoQ, Way of Quality]
 ### Way of Quality GmbH
 
 Sudetenstrasse 11 <br/>
-94431 Pilsting    <br/>
+93047 Regensburg  <br/>
 <br/>
-__Telefone__ +49 (0)9953 329000     <br/>
 __Mobile__   +49 (0)151 23470823    <br/>
 __Fax__      +49 (0)1805 0065342114 <br/>
 
