@@ -6,7 +6,7 @@ tags: [WoQ, Way of Quality]
 
 ### Way of Quality GmbH
 
-Sudetenstrasse 11 <br/>
+Stahlzwingerweg 6 <br/>
 93047 Regensburg  <br/>
 <br/>
 __Mobile__   +49 (0)151 23470823    <br/>
