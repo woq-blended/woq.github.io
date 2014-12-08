@@ -1,0 +1,36 @@
+Seminare 
+ - Titel 
+ - Kurzbeschreibung
+ - Beschreibung
+ - Dauer
+ - Basispreis
+ - Trainer
+ - max. Teilnehmer
+
+ Trainer
+ - Titel 
+ - Name 
+ - Vorname
+ - Adresse
+ - eMail 
+
+ Teilnehmer 
+ - Titel
+ - Name 
+ - Vorname
+ - Addresse
+ - eMail 
+
+ Termin
+ - Seminar
+ - Starttermin
+ - Endtermin
+ - 1..N Teilnehmer 
+
+ Funktionen:
+
+- Seminar anlegen, bearbeiten, löschen
+- Trainer anlegen, bearbeiten, löschen
+- Termin planen, Teilnehmer hinzufügen, Teilnehmer löschen, Termin bearbeiten
+- Katalogplanung 
+
