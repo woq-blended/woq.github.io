@@ -70,7 +70,7 @@ On **Wednesday** we'll skip the lectures and enjoy a day off. The unique locatio
 * A day on the Mediterranean Sea on board of a sailing boat. 
 * A day's introduction to diving 
 * Visit Granada and the Alhambra
-* A trip to the home of the Sherry in Jerez
+* A trip to the home of the Sherry in **Jerez de la Frontera**
 * ... _and many more_
 
 ### Scala for Developers
