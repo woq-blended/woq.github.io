@@ -49,7 +49,7 @@ but not the temperatures of inland Spain of up to 40 – 45ºC., as in many sout
 in Winter might only be 10 – 12ºC. This soon rises to a normal average of 18 – 20ºC, though a good day can reach 22 – 24ºC.
 More important than the shade temperature in Winter is the temperature in the sun.
 
-## Trainings 
+## Trainings for 2015 
 
 Our training programs last 7 days with arrivals on Sunday afternoon and departures on the next Sunday. This gives us the time to start 
 each day with a Yoga class and a breakfast we take together on the central plaza. After breakfast we continue with a lecture followed 
@@ -98,9 +98,32 @@ Akka ? - Then this course is for you. We will work through a small yet not trivi
 of Akka and at the same using them in practice. 
 
 We will have a special focus on testing concurrent programs built with Akka and investigate design patterns that make 
-reasoning about concurrent programs a walk in the park. The examples for this week are taken from an ongoing project 
+reasoning about concurrent programs a walk in the park. The examples for this course are taken from an ongoing project
 that we have built on Akka since 2012. 
 
 Participants will be able to use Akka in their own projects and integrate the concepts with their own tool chain. 
+
+### Using Docker, Scala &amp; Akka for Integration Testing
+
+In this hands-on course we use one of our ongoing projects for an introduction to Docker and a Scala based API 
+that is subsequently used within integration tests of a distributed application. 
+
+In particular we will:
+
+* Introduce docker
+* Set up docker on the development machines
+* Learn how to encapsulate distributed modules in Docker images
+* Learn how to combine various docker instances into a environment under test
+* Discuss design patterns for integration tests 
+* Review pitfalls prohibiting integration tests from running in a CI environment
+* Discuss how to selectively run integration locally within the development cycle
+
+### Team breakouts and Hackathon's
+
+If you are a team up to 16 people and are looking for a nice place to have a team breakout or a hackathon, San Rafael is just 
+the place. We provide the same accommodation and program as within our trainings while you enjoy your technical breakout 
+at a unique location. 
+
+As an add-on we can participate in your breakout and throw in experience from more than 20 years in consulting.
 
 
