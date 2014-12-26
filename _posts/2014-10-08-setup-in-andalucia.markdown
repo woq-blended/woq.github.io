@@ -14,7 +14,7 @@ for an exciting programme starting in April 2015.
 
 ## Training location 
 
-The seminar house Castillo San Rafael is located in La Herradura at the Costa del Sol in Andalucia. 
+The seminar house **Castillo San Rafael** is located in La Herradura at the Costa del Sol in Andalucia.
 
 Castillo San Rafael sits above the Bay of La Herradura with its village of stepped alleyways towards one end. 
 Almuñecar is the main local town along this part of the **Costa Tropical** or **Costa Granadina**, the Coast of Granada,
@@ -70,7 +70,7 @@ On **Wednesday** we'll skip the lectures and enjoy a day off. The unique locatio
 * A day on the Mediterranean Sea on board of a sailing boat. 
 * A day's introduction to diving 
 * Visit Granada and the Alhambra
-* A trip to the home of the Sherry in **Jerez de la Frontera**
+* A trip to the home of Sherry in **Jerez de la Frontera**
 * ... _and many more_
 
 ### Scala for Developers
