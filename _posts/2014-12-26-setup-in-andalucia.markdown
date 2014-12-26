@@ -47,7 +47,7 @@ cherimoya, we do not have a **tropical** climate. It is not insufferably hot wit
 In summer we enjoy average midday shade temperatures of 28ºC.. We do not suffer heat waves, but a hotter day may reach 30 or 31ºC., 
 but not the temperatures of inland Spain of up to 40 – 45ºC., as in many southern European countries also. Early morning temperatures 
 in Winter might only be 10 – 12ºC. This soon rises to a normal average of 18 – 20ºC, though a good day can reach 22 – 24ºC.
-More important than the shade temperature in Winter is the temperature in the sun.
+More important than the shade temperature in Winter is the temperature in the sun, which is almost always very pleasant.
 
 ## Trainings for 2015 
 
