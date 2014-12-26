@@ -101,7 +101,7 @@ We will have a special focus on testing concurrent programs built with Akka and 
 reasoning about concurrent programs a walk in the park. The examples for this course are taken from an ongoing project
 that we have built on Akka since 2012. 
 
-Participants will be able to use Akka in their own projects and integrate the concepts with their own tool chain. 
+Participants will be able to use Akka in their own projects and integrate the concepts with their own tool chain.
 
 ### Using Docker, Scala &amp; Akka for Integration Testing
 
