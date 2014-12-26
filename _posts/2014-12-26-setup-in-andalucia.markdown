@@ -2,7 +2,7 @@
 layout: post
 title:  "A home for training"
 headline: "IT-Quality and Quality of Life"
-date:   2014-10-08
+date:   2014-12-26
 comments: true
 author: Andreas Gies
 categories: [Training, Yoga, Open Source, Way of Quality]
