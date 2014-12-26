@@ -103,7 +103,4 @@ that we have built on Akka since 2012.
 
 Participants will be able to use Akka in their own projects and integrate the concepts with their own tool chain. 
 
-### Organizing integration tests with Docker 
-
-## Team breakouts / Hackathon's 
 
