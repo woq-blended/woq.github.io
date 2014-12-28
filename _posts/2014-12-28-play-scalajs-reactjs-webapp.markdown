@@ -63,23 +63,23 @@ of the original [ReactJS tutorial](http://facebook.github.io/react/docs/tutorial
 
 ### Play for Scala 
 
-| **Author**       | Peter Hilton       |
-|                  | Erik Bakker        |
-|                  | Francisco Canedo   |
-| **ISBN**         | 978-1-61729-079-4  |
-| **Published By** | Manning, 2014 |
+| **Author**       || Peter Hilton       |
+|                  || Erik Bakker        |
+|                  || Francisco Canedo   |
+| **ISBN**         || 978-1-61729-079-4  |
+| **Published By** || Manning, 2014 |
 
 ### Play Framework essentials 
 
-| **Author**       | Julien Richard-Foy |
-| **ISBN**         | 978-1-78398-240-0  |
-| **Published By** | Packt Publishing, 2014 |
+| **Author**       || Julien Richard-Foy |
+| **ISBN**         || 978-1-78398-240-0  |
+| **Published By** || Packt Publishing, 2014 |
 
 ### Extending Bootstrap 
 
-| **Author**       | Christoffer Niska |
-| **ISBN**         | 978-1-78216-841-6 |
-| **Published By** | Packt Publishing, 2014 |
+| **Author**       || Christoffer Niska |
+| **ISBN**         || 978-1-78216-841-6 |
+| **Published By** || Packt Publishing, 2014 |
 
 ## Milestones 
 
@@ -132,4 +132,4 @@ final application must support at least English, German and Spanish.
 
 The sprints so far should have covered the technical challenges around building a web application in pure Scala. 
 Now the implementation of the remaining business domain objects and the associated UI components should be more or 
-less straight forward. 
+less straight forward.
