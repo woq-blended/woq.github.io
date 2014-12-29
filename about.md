@@ -17,7 +17,7 @@ Andreas Gies <br/>
 eMail [andreas@wayofquality.de](mailto:andreas@wayofquality.de)
 
 __Registration__ <br/>
-Amtsgericht Landshut - HRB 8352
+Amtsgericht Regensburg - HRB 14542
 
 __VAT-Id__ <br/>
 DE274771254
