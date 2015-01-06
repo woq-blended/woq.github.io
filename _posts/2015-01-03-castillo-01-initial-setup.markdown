@@ -328,9 +328,147 @@ This last couple of lines show that the Play application has been built and publ
 we see that we are using the wrong versions on the Heroku instance: Scala 2.10 rather than 2.11.4 and Play 2.3.4 
 rather than 2.3.7. 
 
+Studying some of the example projects it seems that creating a Scala build file is the way to go for a multi module
+project. Though we have only one module so far we will start by creating a file `CastilloBuild.scala` within the project's `project` folder:
+
+{%highlight scala linenos %}
+import com.typesafe.sbt.packager.universal.UniversalKeys
+import play._
+import sbt._
+import Keys._
+
+object CastilloBuild extends Build with UniversalKeys {
+
+  /**
+   * Define the root project as a Play application.
+   */
+  lazy val root =
+    project.in(file("."))
+    .settings(commonSettings:_*)
+    .enablePlugins(PlayScala)
+
+  /**
+   * The setting that will be applied to all sub projects
+   */
+  lazy val commonSettings = Seq(
+    organization := "de.woq",
+    version := "1.0-SNAPSHOT",
+    name := "castillo",
+    scalaVersion := "2.11.4"
+  )
+}
+{%endhighlight%}
+
+After creating that file we can get rid of the file `build.sbt` in the root folder of the project. To finish the 
+cleanup we make sure that the sbt version is 0.13.7 in the file `project\build.properties`. Finally we set the 
+desired version of the Play framework in the file `project\plugins.sbt`.
+
+On Heroku we want to make sure that we execute the application on top of JDK 7, so we create a `system.properties` in the root directory of the project setting the java runtime like this: 
+
+{%highlight text%} 
+java.runtime.version=1.7
+{%endhighlight%}   
+
+To double check the changes we can push them to heroku and wait until the application has been rebuilt. The
+application should be rebuilt and published and we should be able to navigate to the [project's homepage](https://stormy-crag-3594.herokuapp.com/) 
+on heroku again. 
+
+_Note: Heroku uses the OpenJDK by default. Later on I will investigate how to use the Oracle JSK instead. It seems 
+there is a rather old [thread](https://groups.google.com/forum/#!topic/heroku/0Hg4LE7KbOw) on this. It should be possible to use a heroku buildpack based on the Oracle JDK later 
+on._ 
+
+## Change the application secret for deployment on Heroku 
+
+The application has been generated with a play application secret that should only be used for the development 
+server. In production this should be a secret key. Therefore we change the file `conf/application.conf`, so that 
+the application key is 
+
+{%highlight text%}
+application.secret=${APP_SECRET}
+{%endhighlight%}
+
+Then we set the application secret on the heroku application using the heroku client:
+
+{%highlight text%}
+[andreas@woqlinux castillo]$ heroku config:add APP_SECRET=MySuperSecret
+Setting config vars and restarting stormy-crag-3594... done, v13
+APP_SECRET: MySuperSecret
+{%endhighlight%}
+
+As you can see heroku has set the config value and restarted the application. 
+
 ## Instrumentation to monitor the logs
+
+Now we have an initial application up and running with the correct versions and we want to set up a basic monitoring 
+for the logs. We can achieve this by selecting an appropriate addon for our heroku application from the 
+[Heroku AddOn Overview](https://addons.heroku.com/). I have selected the [Papertrail add-on](https://addons.heroku.com/papertrail?utm_campaign=category&utm_medium=dashboard&utm_source=addons), but I would love to hear about other 
+plugins that perform the same task. 
+
+To add the papertrail add-on to the application, we use the heroku client from a command line within the project's 
+root folder:
+
+{%highlight text%}
+[andreas@woqlinux castillo]$ heroku addons:add papertrail 
+Adding papertrail on stormy-crag-3594... done, v11 (free)
+Welcome to Papertrail. Questions and ideas are welcome (support@papertrailapp.com). Happy logging!
+Use `heroku addons:docs papertrail` to view documentation.
+[andreas@woqlinux castillo]$
+{%endhighlight%}
+
+Afterwards we can see the papertrail add-on from the application's dashboard on heroku:
+
+<figure>
+	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/Papertrail.png"></a>
+	<figcaption>The application dashboard</figcaption>
+</figure>
+
+From here we can navigate to the add-on itself and will see the recorded log events:
+
+<figure>
+	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/PaperTrail-logs.png"></a>
+	<figcaption>Some application logs</figcaption>
+</figure>
 
 ## Instrumentation for basic application monitoring
 
-## Refactor to a basic multi-module project
+Next we will add some basic application monitoring in order to monitor the application's health and response 
+times. The add-on I have chosen is [NewReilc](https://addons.heroku.com/newrelic?utm_campaign=category&utm_medium=dashboard&utm_source=addons). Again I would love to hear pro's 
+and con's for other plugins. 
 
+Addin new relic support to the application is a bit more involved - we have to:
+
+* Set up NewRelic as an addon for the application. 
+* Add the NewRelic agent as a dependency to the project 
+* Change the Heroku configuration to be aware of the agent on startup 
+
+First we add NewRelic to the application:
+
+{%highlight text%}
+[andreas@woqlinux castillo]$ heroku addons:add newrelic
+Adding newrelic on stormy-crag-3594... done, v12 (free)
+Use `heroku addons:docs newrelic` to view documentation.
+[andreas@woqlinux castillo]$ 
+{%endhighlight%}
+
+From the application's heroku dashboard we navigate to the NewReilc add-on and need to agree to the license 
+agreement. You can double check the NewRelic settings for your application with the heroku client from a 
+command line within the projects root directory: 
+
+{%highlight text%}
+[andreas@woqlinux castillo]$ heroku config 
+=== stormy-crag-3594 Config Vars
+JAVA_OPTS:             -Xss512k -XX:+UseCompressedOops
+NEW_RELIC_LICENSE_KEY: <<My super secret license key>>
+NEW_RELIC_LOG:         stdout
+PAPERTRAIL_API_TOKEN:  <My secret token>
+PATH:                  .jdk/bin:.sbt_home/bin:/usr/local/bin:/usr/bin:/bin
+REPO:                  /app/.sbt_home/.ivy2/cache
+SBT_OPTS:              -Xmx384m -Xss512k -XX:+UseCompressedOops
+{%endhighlight%}
+
+* Configure Procfile 
+* Configure Java opts 
+* install newrelic.yml
+* Screenshot  
+
+## Refactor to a basic multi-module project
