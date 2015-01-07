@@ -6,7 +6,7 @@ date:   2015-01-03
 comments: true
 author: Andreas Gies
 categories: [Scala, Play, ScalaJS, ReactJS]
-tags: [Scala, Play, ScalaJS, ReactJS, Castillo]
+tags: [Scala, Play, ScalaJS, ReactJS, Castillo, Heroku]
 ---
 This is the first artcle in the blog post series developing a web application based on Scala, ScalaJS, React and Play 
 and I will look at the initial set up. At the end of this first part I want to have a minimalistic Play application
@@ -466,9 +466,126 @@ REPO:                  /app/.sbt_home/.ivy2/cache
 SBT_OPTS:              -Xmx384m -Xss512k -XX:+UseCompressedOops
 {%endhighlight%}
 
-* Configure Procfile 
-* Configure Java opts 
-* install newrelic.yml
-* Screenshot  
+Now, first of all we need to add a library dependency for the newrelic agent to our project, so that it will be included in the packaged application. Essentially, this is done within [the projects build file](http://github.com/CastilloSanRafael/castillo/blob/01_InitialSetup/project/CastilloBuild.scala). 
+
+Next, we need to set up a heroku Procfile and fine tune the Java options. These changes will take enable
+the NewRelic agent within the Play application.
+
+The Procfile lives in the project's root directory and looks like this:
+
+{%highlight text%}
+web: target/universal/stage/bin/castillo -Dhttp.port=${PORT} -Dnewrelic.config.license_key=${NEW_RELIC_LICENSE_KEY}{%endhighlight%} 
+
+Here I only appended the reference to the newrelic license key which is configured uniquely for my application. Having the license key as a reference within the Procfile avoids having it in clear text in 
+the newrelic config file. 
+
+Next we modify the Java options and add the newrelic agent reference. Since we have added the agent jar as a dependency, it will end up in the play application's lib directory, so we simply add 
+
+{%highlight text%}
+-javaagent:target/universal/stage/lib/com.newrelic.agent.java.newrelic-agent-3.12.1.jar
+{%endhighlight%} 
+
+to the Java options. Make sure to look up the current value with `heroku config:get JAVA_OPTS` and then  run
+
+{%highlight text%}
+heroku config:set JAVA_OPTS="<old value goes here> -javaagent:target/universal/stage/lib/com.newrelic.agent.java.newrelic-agent-3.12.1.jar"
+{%endhighlight%} 
+
+_According to the newrelic documentation this should get us going, but reviewing the logs after the application has been restarted the agent complains about a missing newrelic configuration file. It turns 
+out that we can download a template for that file from the application's newrelic dashboard when we look
+at the Ruby configuration. Simply download `newrelic.yml` and stick it in the application's root directory._
+
+Within `newrelic.yml` we comment out the license key and switch it to something else than the real value.
+Also we adjust the app_name, so that it has a meaningful name within newrelic's dashboards. 
+
+After these changes we push again to heroku master and wait for the application to be restarted. We can use the logging dashboard to inspect the logs and make sure that the agent has been started correctly. 
+
+Now we can navigate again to the applications [entry page](https://stormy-crag-3594.herokuapp.com).
+
+_Note that the application takes some time to load when you haven't used it for a while and have configured only a single heroku instance. This should be fine for development though._
+
+After a short while the traffic and response times should show up on the application's NewRelic 
+dashboard on Heroku:
+
+<figure>
+	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/NewRelic.png"></a>
+	<figcaption>Some application traffic</figcaption>
+</figure>
 
 ## Refactor to a basic multi-module project
+
+Now we basically have something like a hello world application deployed on Heroku with some nice dashboards for log and application monitoring. The final step for the first part of this series is to refactor the build file, so that the project is already geared towards supporting multiple modules. 
+
+We have only one module so far, which is the play application itself. The code for this application lives within `app`, `conf` and `public`. Essentially we are going to create a subdirectory `server` and move those directories to that directory. Then we need to make the appropriate changes to our build file.
+
+{%highlight text%}
+[andreas@woqlinux castillo]$ mkdir server 
+[andreas@woqlinux castillo]$ git add server 
+[andreas@woqlinux castillo]$ git mv app/ server/
+[andreas@woqlinux castillo]$ git mv conf/ server
+[andreas@woqlinux castillo]$ git mv public/ server/
+[andreas@woqlinux castillo]$ git status
+# On branch 01_InitialSetup
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	renamed:    app/controllers/Application.scala -> server/app/controllers/Application.scala
+#	renamed:    app/views/main.scala.html -> server/app/views/main.scala.html
+#	renamed:    conf/application.conf -> server/conf/application.conf
+#	renamed:    conf/routes -> server/conf/routes
+{%endhighlight%}
+
+Within the build file we reflect the changes by renaming the `root` project to `server` and change the 
+directory from `"."` to `"server"`. Further we add a new root project aggregating the on and only 
+sub project. Some more changes have been done more or less for cosmetic reasons. [Here](https://github.com/CastilloSanRafael/castillo/commit/86d29c37872ce3617a1f37fbbe09da6ae97e99cb#diff-51b9b1daac46bd0cbc0c0dc44ff5f724) are all the changes for the build file. 
+
+For Heroku we need to reflect the new subdirectory within the Procfile
+
+{%highlight text%}
+web: server/target/universal/stage/bin/castillo-server -Dhttp.port=${PORT} -Dnewrelic.config.license_key=${NEW_RELIC_LICENSE_KEY}
+{%endhighlight%}
+
+and also within the JAVA_OPTS
+
+{%highlight text%}
+heroku config:set JAVA_OPTS="-Xss512k -XX:+UseCompressedOops -javaagent:server/target/universal/stage/lib/com.newrelic.agent.java.newrelic-agent-3.12.1.jar"
+{%endhighlight%}
+
+Then we can push the changes to heroku. After the application has been rebuilt and published we should be able to navigate to the applications [entry page](https://stormy-crag-3594.herokuapp.com) as before. 
+
+_After deplyment I got a Heroku error message about the slug size:_
+
+{%highlight text%}
+remote: -----> Compressing... 
+remote:  !   Compiled slug size: 472.2MB is too large (max is 300MB).
+remote:  !   See: http://devcenter.heroku.com/articles/slug-size
+remote:  !     Push failed: slug archive could not be created
+remote:  !     If the problem persists, see http://help.heroku.com and provide Request ID bee7f883-8414-4160-b398-b502a04de312.
+remote: 
+remote: 
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to stormy-crag-3594.
+{%endhighlight%}
+
+_Referring to the [Heroku documentation](https://devcenter.heroku.com/articles/reducing-the-slug-size-of-play-2-x-applications) we need to reduce the slug size of the deployed application and the first measure is to add the [sbt-native-packager](https://github.com/sbt/sbt-native-packager) to the application's list of sbt plugins in `project/plugins.sbt`:_
+
+{%highlight text%}
+resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
+
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.7")
+
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "0.8.0-RC2")
+{%endhighlight%}
+
+Once the plugin is added, the application can be deployed and works as before. 
+
+## Next steps
+
+Now we have a simplistic project up and running on Heroku and have already prepared to enhance the project with additional modules. The build file starts to take shape and we should have the basic configuration files for monitoring the application in place. 
+
+Next time we will add the first business object and a minimal REST interface to interact with it on the server. 
+
+In a subsequent post we will reuse the business object on the client side in a very simple ReactJS UI. 
+
+Any comments / suggestions are very much appreciated.
