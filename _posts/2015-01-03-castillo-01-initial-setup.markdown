@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A web application with Play, ScalaJS and ReactJS"
+title:  "A web application with Play, ScalaJS and ReactJS - Part I"
 headline: "Initial setup"
 date:   2015-01-03
 comments: true
@@ -49,7 +49,7 @@ drwxrwxr-x@  6 2000     2000    204 24 Oct 01:00 scala-2.11.4
 drwxr-xr-x@  5 andreas  staff   170 13 Oct 19:18 zinc-0.3.5.3
 {%endhighlight%}
 
-After the successful installation and configuration you should be able to execute `scala -version from the command
+After the successful installation and configuration you should be able to execute `scala -version` from the command
 and see something like this as a result:
 
 {%highlight text%}
@@ -62,8 +62,8 @@ Andreass-MacBook-Air:~ andreas$
 
 Next, you can download the desired sbt version from [here](http://www.scala-sbt.org/0.13/tutorial/Manual-Installation.html). 
 I tend to use the manual installation and download the archive with the binaries for my platform and extract them into 
-a directory of my choice. This will create a new directory named *sbt* which i normally change to *sbt-<version>* where 
-version is the sbt version. This allows me again to create a symbolic link named *sbt* to the renamed directory and set 
+a directory of my choice. This will create a new directory named `sbt` which i normally change to *sbt-<version>* where
+version is the sbt version. This allows me again to create a symbolic link named `sbt` to the renamed directory and set
 up my path using the symbolic link. 
 
 Now we would have something like 
@@ -120,7 +120,7 @@ Play application with no dependencies. You can either instantiate the template f
 or use the activator command line. 
 
 For now I'll stick with the command line version to create the application. Regardless which template you use you can 
-use `activator new <app-name> <template-name` to instantiate the chosen template with an arbitrary name. In my case 
+use `activator new <app-name> <template-name>` to instantiate the chosen template with an arbitrary name. In my case
 I have used 
 
 {%highlight text%}
@@ -183,10 +183,10 @@ that keeps the brain busy for too long. Stop the server with `Ctrl-C` and we sta
 
 ### Initial git commit 
 
-Examining the generated application you will find 3 files **activator, activator.bat, activator-launch-<version>.jar**. 
+Examining the generated application you will find 3 files `activator`, `activator.bat`, `activator-launch-<version>.jar`.
 As you can run the project with sbt only I tend to get rid of these files and remove them before the initial commit. 
 Also I find it is a good practice to run sbt clean and delete the logs before the initial commit. Also review the 
-`LICENSE` file tha ´ has been generated. 
+`LICENSE` file that has been generated.
 
 Now we are ready to create an initial git repository and perform the initial commit:
 
@@ -260,8 +260,6 @@ that repository, the application will be rebuilt and started.
 
 {%highlight text%}
 Andreass-MacBook-Air:castillo andreas$ heroku login
-Your version of git is 1.9.3. Which has serious security vulnerabilities.
-More information here: https://blog.heroku.com/archives/2014/12/23/update_your_git_clients_on_windows_and_os_x
 Enter your Heroku credentials.
 Email: andreas@wayofquality.de
 Password (typing will be hidden): 
@@ -432,10 +430,10 @@ From here we can navigate to the add-on itself and will see the recorded log eve
 ## Instrumentation for basic application monitoring
 
 Next we will add some basic application monitoring in order to monitor the application's health and response 
-times. The add-on I have chosen is [NewReilc](https://addons.heroku.com/newrelic?utm_campaign=category&utm_medium=dashboard&utm_source=addons). Again I would love to hear pro's 
+times. The add-on I have chosen is [NewRelic](https://addons.heroku.com/newrelic?utm_campaign=category&utm_medium=dashboard&utm_source=addons). Again I would love to hear pro's
 and con's for other plugins. 
 
-Addin new relic support to the application is a bit more involved - we have to:
+Adding new relic support to the application is a bit more involved - we have to:
 
 * Set up NewRelic as an addon for the application. 
 * Add the NewRelic agent as a dependency to the project 
@@ -450,7 +448,7 @@ Use `heroku addons:docs newrelic` to view documentation.
 [andreas@woqlinux castillo]$ 
 {%endhighlight%}
 
-From the application's heroku dashboard we navigate to the NewReilc add-on and need to agree to the license 
+From the application's heroku dashboard we navigate to the NewRelic add-on and need to agree to the license
 agreement. You can double check the NewRelic settings for your application with the heroku client from a 
 command line within the projects root directory: 
 
