@@ -508,7 +508,7 @@ After a short while the traffic and response times should show up on the applica
 dashboard on Heroku:
 
 <figure>
-	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/NewRelic.png"></a>
+	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/newrelic.png"></a>
 	<figcaption>Some application traffic</figcaption>
 </figure>
 
