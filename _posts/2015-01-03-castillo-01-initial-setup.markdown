@@ -360,8 +360,8 @@ object CastilloBuild extends Build with UniversalKeys {
 {%endhighlight%}
 
 After creating that file we can get rid of the file `build.sbt` in the root folder of the project. To finish the 
-cleanup we make sure that the sbt version is 0.13.7 in the file `project\build.properties`. Finally we set the 
-desired version of the Play framework in the file `project\plugins.sbt`.
+cleanup we make sure that the sbt version is 0.13.7 in the file `project/build.properties`. Finally we set the 
+desired version of the Play framework in the file `project/plugins.sbt`.
 
 On Heroku we want to make sure that we execute the application on top of JDK 7, so we create a `system.properties` in the root directory of the project setting the java runtime like this: 
 
