@@ -62,7 +62,7 @@ Andreass-MacBook-Air:~ andreas$
 
 Next, you can download the desired sbt version from [here](http://www.scala-sbt.org/0.13/tutorial/Manual-Installation.html). 
 I tend to use the manual installation and download the archive with the binaries for my platform and extract them into 
-a directory of my choice. This will create a new directory named `sbt` which i normally change to *sbt-<version>* where
+a directory of my choice. This will create a new directory named `sbt` which i normally change to `sbt-version where
 version is the sbt version. This allows me again to create a symbolic link named `sbt` to the renamed directory and set
 up my path using the symbolic link. 
 
@@ -494,7 +494,7 @@ out that we can download a template for that file from the application's newreli
 at the Ruby configuration. Simply download `newrelic.yml` and stick it in the application's root directory._
 
 Within `newrelic.yml` we comment out the license key and switch it to something else than the real value.
-Also we adjust the app_name, so that it has a meaningful name within newrelic's dashboards. 
+Also we adjust the _app_name_, so that it has a meaningful name within newrelic's dashboards. 
 
 After these changes we push again to heroku master and wait for the application to be restarted. We can use the logging dashboard to inspect the logs and make sure that the agent has been started correctly. 
 
