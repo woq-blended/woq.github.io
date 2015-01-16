@@ -53,9 +53,8 @@ After the successful installation and configuration you should be able to execut
 and see something like this as a result:
 
 {%highlight text%}
-Andreass-MacBook-Air:~ andreas$ scala -version 
+$ scala -version
 Scala code runner version 2.11.4 -- Copyright 2002-2013, LAMP/EPFL
-Andreass-MacBook-Air:~ andreas$ 
 {%endhighlight%}
 
 ### SBT
@@ -69,8 +68,8 @@ up my path using the symbolic link.
 Now we would have something like 
 
 {%highlight text%}
-Andreass-MacBook-Air:~ andreas$ cd /opt/
-Andreass-MacBook-Air:opt andreas$ ls -al
+$ cd /opt
+$ ls -al
 total 24
 drwxr-xr-x@ 10 root     wheel   340  3 Jan 16:36 .
 drwxr-xr-x  34 root     wheel  1224 12 Dec 10:55 ..
@@ -87,7 +86,7 @@ drwxr-xr-x@  5 andreas  staff   170 13 Oct 19:18 zinc-0.3.5.3
 You can double check the sbt setup with `sbt --version` and should see something like 
 
 {%highlight text%}
-Andreass-MacBook-Air:opt andreas$ sbt --version
+$ sbt --version
 sbt launcher version 0.13.7
 {%endhighlight%}
 
@@ -124,7 +123,7 @@ use `activator new <app-name> <template-name>` to instantiate the chosen templat
 I have used 
 
 {%highlight text%}
-Andreass-MacBook-Air:play andreas$ activator new castillo just-play-scala
+$ activator new castillo just-play-scala
 {%endhighlight%}
 
 The result on the command line should look like this:
@@ -160,7 +159,7 @@ sbt run
 This will build the application and start the Play framework running it with a listener available on port 9000:
 
 {%highlight text%}
-Andreass-MacBook-Air:castillo andreas$ sbt run 
+$ sbt run
 [info] Loading project definition from /Users/andreas/projects/play/castillo/project
 [info] Updating {file:/Users/andreas/projects/play/castillo/project/}castillo-build...
 [info] Resolving org.fusesource.jansi#jansi;1.4 ...
@@ -191,10 +190,10 @@ Also I find it is a good practice to run sbt clean and delete the logs before th
 Now we are ready to create an initial git repository and perform the initial commit:
 
 {%highlight text%}
-Andreass-MacBook-Air:castillo andreas$ git init
+$ git init
 Initialized empty Git repository in /Users/andreas/projects/play/castillo/.git/
-Andreass-MacBook-Air:castillo andreas$ git add . 
-Andreass-MacBook-Air:castillo andreas$ git commit -m "Initial commit." 
+$ git add .
+$ git commit -m "Initial commit."
 [master (root-commit) 7f42791] Initial commit.
  9 files changed, 128 insertions(+)
  create mode 100644 .gitignore
@@ -206,7 +205,7 @@ Andreass-MacBook-Air:castillo andreas$ git commit -m "Initial commit."
  create mode 100644 conf/routes
  create mode 100644 project/build.properties
  create mode 100644 project/plugins.sbt
-Andreass-MacBook-Air:castillo andreas$ git status 
+$ git status
 On branch master
 nothing to commit, working directory clean
 {%endhighlight%}
@@ -216,8 +215,8 @@ for the application lives at [https://github.com/CastilloSanRafael/castillo](htt
 To add the remote repository and push the initial commit: 
 
 {%highlight text%}
-Andreass-MacBook-Air:castillo andreas$ git remote add origin ssh://git@github.com/CastilloSanRafael/castillo.git
-Andreass-MacBook-Air:castillo andreas$ git push origin master 
+$ git remote add origin ssh://git@github.com/CastilloSanRafael/castillo.git
+$ git push origin master
 Counting objects: 16, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (14/14), done.
@@ -225,11 +224,11 @@ Writing objects: 100% (16/16), 2.71 KiB | 0 bytes/s, done.
 Total 16 (delta 0), reused 0 (delta 0)
 To ssh://git@github.com/CastilloSanRafael/castillo.git
  * [new branch]      master -> master
-Andreass-MacBook-Air:castillo andreas$ git branch --set-upstream-to=origin/master
+$ git branch --set-upstream-to=origin/master
 Branch master set up to track remote branch master from origin.
-Andreass-MacBook-Air:castillo andreas$ git checkout -b 01_InitialSetup
+$ git checkout -b 01_InitialSetup
 Switched to a new branch '01_InitialSetup'
-Andreass-MacBook-Air:castillo andreas$ git push origin --all
+$ git push origin --all
 Total 0 (delta 0), reused 0 (delta 0)
 To ssh://git@github.com/CastilloSanRafael/castillo.git
  * [new branch]      01_InitialSetup -> 01_InitialSetup
@@ -259,18 +258,18 @@ the project. This will add an additional remote repository to the project. Every
 that repository, the application will be rebuilt and started. 
 
 {%highlight text%}
-Andreass-MacBook-Air:castillo andreas$ heroku login
+$ heroku login
 Enter your Heroku credentials.
 Email: andreas@wayofquality.de
 Password (typing will be hidden): 
 Authentication successful.
-Andreass-MacBook-Air:castillo andreas$ heroku create 
+$ heroku create
 Your version of git is 1.9.3. Which has serious security vulnerabilities.
 More information here: https://blog.heroku.com/archives/2014/12/23/update_your_git_clients_on_windows_and_os_x
 Creating stormy-crag-3594... done, stack is cedar-14
 https://stormy-crag-3594.herokuapp.com/ | https://git.heroku.com/stormy-crag-3594.git
 Git remote heroku added
-Andreass-MacBook-Air:castillo andreas$ git push heroku master 
+$ git push heroku master
 Counting objects: 16, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (14/14), done.
@@ -388,7 +387,7 @@ application.secret=${APP_SECRET}
 Then we set the application secret on the heroku application using the heroku client:
 
 {%highlight text%}
-[andreas@woqlinux castillo]$ heroku config:add APP_SECRET=MySuperSecret
+$ heroku config:add APP_SECRET=MySuperSecret
 Setting config vars and restarting stormy-crag-3594... done, v13
 APP_SECRET: MySuperSecret
 {%endhighlight%}
@@ -406,11 +405,10 @@ To add the papertrail add-on to the application, we use the heroku client from a
 root folder:
 
 {%highlight text%}
-[andreas@woqlinux castillo]$ heroku addons:add papertrail 
+$ heroku addons:add papertrail
 Adding papertrail on stormy-crag-3594... done, v11 (free)
 Welcome to Papertrail. Questions and ideas are welcome (support@papertrailapp.com). Happy logging!
 Use `heroku addons:docs papertrail` to view documentation.
-[andreas@woqlinux castillo]$
 {%endhighlight%}
 
 Afterwards we can see the papertrail add-on from the application's dashboard on heroku:
@@ -442,10 +440,9 @@ Adding new relic support to the application is a bit more involved - we have to:
 First we add NewRelic to the application:
 
 {%highlight text%}
-[andreas@woqlinux castillo]$ heroku addons:add newrelic
+$ heroku addons:add newrelic
 Adding newrelic on stormy-crag-3594... done, v12 (free)
 Use `heroku addons:docs newrelic` to view documentation.
-[andreas@woqlinux castillo]$ 
 {%endhighlight%}
 
 From the application's heroku dashboard we navigate to the NewRelic add-on and need to agree to the license
@@ -453,7 +450,7 @@ agreement. You can double check the NewRelic settings for your application with 
 command line within the projects root directory: 
 
 {%highlight text%}
-[andreas@woqlinux castillo]$ heroku config 
+$ heroku config
 === stormy-crag-3594 Config Vars
 JAVA_OPTS:             -Xss512k -XX:+UseCompressedOops
 NEW_RELIC_LICENSE_KEY: <<My super secret license key>>
@@ -517,12 +514,12 @@ Now we basically have something like a hello world application deployed on Herok
 We have only one module so far, which is the play application itself. The code for this application lives within `app`, `conf` and `public`. Essentially we are going to create a subdirectory `server` and move those directories to that directory. Then we need to make the appropriate changes to our build file.
 
 {%highlight text%}
-[andreas@woqlinux castillo]$ mkdir server 
-[andreas@woqlinux castillo]$ git add server 
-[andreas@woqlinux castillo]$ git mv app/ server/
-[andreas@woqlinux castillo]$ git mv conf/ server
-[andreas@woqlinux castillo]$ git mv public/ server/
-[andreas@woqlinux castillo]$ git status
+$ mkdir server
+$ git add server
+$ git mv app/ server/
+$ git mv conf/ server
+$ git mv public/ server/
+$ git status
 # On branch 01_InitialSetup
 # Changes to be committed:
 #   (use "git reset HEAD <file>..." to unstage)
