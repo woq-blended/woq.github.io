@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A web application with Play, ScalaJS and ReactJS - Part I"
+title:  "A web application with Play, ScalaJS, ReactJS - Part I"
 headline: "Initial setup"
 date:   2015-01-03
 comments: true
