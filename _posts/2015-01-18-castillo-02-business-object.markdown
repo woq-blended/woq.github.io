@@ -9,11 +9,6 @@ categories: [Scala, Play, ScalaJS, ReactJS]
 tags: [Scala, Play, ScalaJS, ReactJS, Castillo, Heroku]
 ---
 
-So far in this series:
-
-  * [Introduction]({%post_url 2014-12-28-play-scalajs-reactjs-webapp%})
-  * [Initial setup]({%post_url 2015-01-03-castillo-01-initial-setup%})
-
 After a couple of travelling days today I have some time to continue the prototyping for our Play application using 
 ScalaJS and ReactJS on the client side. The initial setup has been discussed in the 
 [first article]({%post_url 2015-01-03-castillo-01-initial-setup%}) of this series of blog entries. Today I will dive
@@ -27,7 +22,12 @@ and Scala in the frontend we follow [Hands-On ScalaJS](http://lihaoyi.github.io/
 The source code behind this article is in the project's github repository within the branch 
 [02_BusinessObject](https://github.com/CastilloSanRafael/castillo/tree/02_BusinessObject).
 
-## Considerations for creating business object case classes 
+So far in this series:
+
+  * [Introduction]({%post_url 2014-12-28-play-scalajs-reactjs-webapp%})
+  * [Initial setup]({%post_url 2015-01-03-castillo-01-initial-setup%})
+
+## Considerations for creating business object case classes
 
 The case classes for business objects will be used in two different contexts: The server side and also on the client 
 side. This is important to know because those case classes need to be compiled and packaged differently for each of 
