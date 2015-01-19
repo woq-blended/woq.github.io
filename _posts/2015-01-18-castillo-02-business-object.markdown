@@ -467,33 +467,20 @@ conversion from `Writes` into `Writables` in place.
 
 {%highlight scala linenos%}
 "allow to update an existing seminar" in {
+  createSeminar(details) match {
+    case None => fail("Seminar for update not created")
+    case Some(s) =>
+      val update = executeWsRequest(
+        WS.url(s"$portfolioBase/${s.id}")
+          .withBody[Seminar](s.copy(details = details.copy(duration = 7)))
+          .withMethod("PUT")
+      )
 
-  // create a new seminar for the test 
-  val result = Await.result(
-    WS.url(portfolioBase)
-      .withBody[SeminarDetails](details)
-      .withMethod("POST")
-      .execute(),
-    1.second
-  )
-
-  result.status should be (OK)
-
-  val seminar = Json.fromJson[Seminar](Json.parse(result.body))
-  seminar.isSuccess should be (true)
-  seminar.get.details should be (details)
-  
-  // perform the update on the seminar just created
-  val update = Await.result(
-    WS.url(s"$portfolioBase/${seminar.get.id}").put[Seminar](
-      seminar.get.copy(details = details.copy(duration = 7))
-    ), 1.second
-  )
-  
-  update.status should be (OK)
-  val updated = Json.fromJson[Seminar](Json.parse(update.body))
-  updated.isSuccess should be (true)
-  updated.get.details should be (details.copy(duration = 7))
+      update.status should be (OK)
+      val updated = validateJSON[Seminar](update.body)
+      updated should not be None
+      updated.foreach(_.details should be (details.copy(duration = 7)))
+  }
 }
 {%endhighlight%}
 
