@@ -47,7 +47,7 @@ Within the project settings you can configure a post commit hook for github, so 
 is triggered. 
 
 <figure>
-	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/Codacy-Add-Project.png"></a>
+	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/Codacy-Git-Hook.png"></a>
 	<figcaption>Adding a github project for analysis in Codacy</figcaption>
 </figure>
 
