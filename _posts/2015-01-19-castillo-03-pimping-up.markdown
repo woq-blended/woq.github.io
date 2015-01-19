@@ -34,11 +34,6 @@ After selecting github you will be presented with your github projects and you c
 like to be checked. Please note that for now codacy only supports Scala, but that is just fine because we are developing 
 a Scala project.
  
-<figure>
-	<img src="{{ site.url }}/images/{{ page.date | date: "%Y-%m-%d" }}/Codacy-Add-Project.png"></a>
-	<figcaption>Adding a github project for analysis in Codacy</figcaption>
-</figure>
-
 After adding the project to Codacy the initial analysis is started on the `master` branch with the default rule set. 
 From within the project dashboard you will find a link `</> Code patterns` from where you can review and configure the 
 ruleset that should be applied for future analyses. 
