@@ -448,13 +448,9 @@ On `Ok` we examine the result whether it is a sequence of Seminars serialzed as 
 
 {%highlight scala linenos%}
 "provide the list of available seminars at /portfolio" in {
-  val result = Await.result(WS.url(portfolioBase).get(), 1.second)
+  val result = executeWsRequest(WS.url(portfolioBase).withMethod("GET"))
   result.status should be (OK)
-
-  val seminars = Json.fromJson[Seq[Seminar]](Json.parse(result.body))
-  seminars.isSuccess should be (true)
-
-  seminars.get should have size(1)
+  validateJSON[Seq[Seminar]](result.body)
 }
 {%endhighlight%}
 
