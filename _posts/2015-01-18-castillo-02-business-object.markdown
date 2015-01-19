@@ -424,12 +424,37 @@ class PortfolioRestSpec extends WordSpec
     duration = 5
   )
 
-  // Tranform a Writes[A] into a Writable[A]
-  
-  implicit private def jsWriteable[A](
+  // Transform a Writes[A] into a Writable[A]
+  implicit private[this] def jsWriteable[A](
     implicit wa: Writes[A], wjs: Writeable[JsValue]
   ): Writeable[A] = wjs.map(a => Json.toJson(a))
   
+  private[this] def executeWsRequest(request : WSRequestHolder) =
+    Await.result(request.execute(), 2.second)
+  
+  private[this] def createSeminar(details : SeminarDetails) = {
+    
+    val result = executeWsRequest(
+      WS.url(portfolioBase)
+        .withBody[SeminarDetails](details)
+        .withMethod("POST")
+    )
+
+    result.status should be (OK)
+    validateJSON[Seminar](result.body)
+  }
+  
+  private[this] def validateJSON[T](json : String)(implicit reads: Reads[T]) : Option[T] = {
+    val result = Json.fromJson[T](Json.parse(json)).asOpt
+    
+    result match { 
+      case None => fail("Failed to validate JSON response")
+      case _ =>
+    }
+    
+    result
+  }
+    
   ... All specifications here 
   
 }
