@@ -486,7 +486,6 @@ object HelloReact extends JSApp{
     .componentDidMount(scope => {
       val url = "/portfolio"
       Ajax.get(url).foreach { xhr =>
-        println(xhr.responseText)
         val seminars = upickle.read[Seq[Seminar]](xhr.responseText)
         scope.setState(State(seminars))
       }
@@ -497,6 +496,13 @@ object HelloReact extends JSApp{
 
 }
 {%endhighlight%}
+
+_**Note:** We have started with `Long` as the type for the primary identifier of our seminars. It seems, that values 
+of type `Long` are (de)serialized as Strings within upickle but as JSON numbers on the server side. To get this initial
+example going, we have decided to change the seminar type to use Strings as the primary identifier, so that both sides 
+are (de)serialized in the same way._
+
+The complete code for the example is available on [github](https://github.com/CastilloSanRafael/castillo/tree/03_InitialWebClient).
 
 ## Conclusion 
 
