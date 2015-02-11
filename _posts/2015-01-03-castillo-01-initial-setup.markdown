@@ -176,7 +176,7 @@ $ sbt run
 (Server started, use Ctrl+D to stop and go back to the console...)
 {%endhighlight%}
 
-You can now open a browser and navigate to http://localhost:900 and you should see a friendly **Just Play Scala** 
+You can now open a browser and navigate to http://localhost:9000 and you should see a friendly **Just Play Scala**
 in the browser window as a result. I admit it is not much of an application, but it is nice to look at and nothing 
 that keeps the brain busy for too long. Stop the server with `Ctrl-C` and we start cleaning up the initial set up.
 
